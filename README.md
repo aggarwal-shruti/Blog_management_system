@@ -29,4 +29,51 @@ The **Blog Management System** is a Django-based RESTful API that allows users t
 ```sh
 git clone https://github.com/aggarwal-shruti/Blog_management_system.git
 cd Blog_management_system
+```
+
+
+### 🔹 Step 2: Create a Virtual Environment  
+```sh
+python -m venv venv
+venv\Scripts\activate     # For Windows
+```
+### 🔹 Step 3: Install Dependencies 
+```sh
+pip install -r requirements.txt
+```
+### 🔹 Step 4: Apply Migrations
+```sh
+python manage.py makemigrations
+python manage.py migrate
+```
+### 🔹 Step 5: Run Server
+```sh
+python manage.py runserver
+```
+The API will be available at: http://127.0.0.1:8000/api/
+
+## 📌 API Endpoints
+### 🔹 User Authentication
+```sh
+Method	Endpoint	Description
+POST	/api/register/	Register a new user
+POST	/api/login/	Log in a user
+POST	/api/logout/	Log out a user
+POST	/api/token/	Obtain authentication token
+```
+### 🔹 Blog Management
+```sh
+Method	Endpoint	Description
+GET	/api/blogs/  	List all blogs
+POST	/api/blogs/	 Create a new blog
+GET	/api/blogs/{id}/	Retrieve a blog by ID
+PUT	/api/blogs/{id}/	Update a blog
+DELETE	/api/blogs/{id}/	Delete a blog
+```
+## 🔹 Comments
+```sh
+Method	Endpoint	Description
+GET	/api/comment/	List all comments
+POST	/api/comment/	Add a new comment
+```
 
